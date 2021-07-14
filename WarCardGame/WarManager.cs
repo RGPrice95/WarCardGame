@@ -198,15 +198,11 @@ namespace WarCardGame
         void PrintTurnInfo(string playerAName, Card playerADraw, string playerBName, Card playerBDraw)
         {
             playerAName += " Plays:";
-
-            int offset = playerAName.Length > 10 ? playerAName.Length : 10;
-
             playerBName += " Plays:";
             Console.WriteLine("{0,-25}{1,25}", playerAName, playerBName);
 
             string[] a = playerADraw.GetAsciiCard();
             string[] b = playerBDraw.GetAsciiCard();
-            offset -= a.Length;
 
             //Cards print value always share the same length, so we can just grab it from one of them
             for (int i = 0; i < a.Length; i++)
