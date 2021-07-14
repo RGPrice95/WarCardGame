@@ -1,0 +1,16 @@
+F:\Visual Studio Projects\WarCardGame\WarCardGame\bin\Release\net5.0\WarCardGame.exe
+F:\Visual Studio Projects\WarCardGame\WarCardGame\bin\Release\net5.0\WarCardGame.deps.json
+F:\Visual Studio Projects\WarCardGame\WarCardGame\bin\Release\net5.0\WarCardGame.runtimeconfig.json
+F:\Visual Studio Projects\WarCardGame\WarCardGame\bin\Release\net5.0\WarCardGame.runtimeconfig.dev.json
+F:\Visual Studio Projects\WarCardGame\WarCardGame\bin\Release\net5.0\WarCardGame.dll
+F:\Visual Studio Projects\WarCardGame\WarCardGame\bin\Release\net5.0\ref\WarCardGame.dll
+F:\Visual Studio Projects\WarCardGame\WarCardGame\bin\Release\net5.0\WarCardGame.pdb
+F:\Visual Studio Projects\WarCardGame\WarCardGame\obj\Release\net5.0\WarCardGame.GeneratedMSBuildEditorConfig.editorconfig
+F:\Visual Studio Projects\WarCardGame\WarCardGame\obj\Release\net5.0\WarCardGame.AssemblyInfoInputs.cache
+F:\Visual Studio Projects\WarCardGame\WarCardGame\obj\Release\net5.0\WarCardGame.AssemblyInfo.cs
+F:\Visual Studio Projects\WarCardGame\WarCardGame\obj\Release\net5.0\WarCardGame.csproj.CoreCompileInputs.cache
+F:\Visual Studio Projects\WarCardGame\WarCardGame\obj\Release\net5.0\WarCardGame.dll
+F:\Visual Studio Projects\WarCardGame\WarCardGame\obj\Release\net5.0\ref\WarCardGame.dll
+F:\Visual Studio Projects\WarCardGame\WarCardGame\obj\Release\net5.0\WarCardGame.pdb
+F:\Visual Studio Projects\WarCardGame\WarCardGame\obj\Release\net5.0\WarCardGame.genruntimeconfig.cache
+F:\Visual Studio Projects\WarCardGame\WarCardGame\obj\Release\net5.0\WarCardGame.csprojAssemblyReference.cache
