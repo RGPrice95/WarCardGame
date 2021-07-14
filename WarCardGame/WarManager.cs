@@ -123,8 +123,7 @@ namespace WarCardGame
             {
                 Card playerOneDraw = players[0].DrawCard(winnerPool);
                 Card playerTwoDraw = players[1].DrawCard(winnerPool);
-                Console.WriteLine(string.Format("{0} plays:\t{1} plays:", players[0].PlayerName, players[1].PlayerName));
-                MultiCardPrint(playerOneDraw, playerTwoDraw);
+                PrintTurnInfo(players[0].PlayerName, playerOneDraw, players[1].PlayerName, playerTwoDraw);
 
                 while (playerOneDraw.cardValue == playerTwoDraw.cardValue)
                 {
@@ -144,10 +143,7 @@ namespace WarCardGame
                     if (playerOneDraw == null || playerTwoDraw == null)
                         break;
 
-                    Console.WriteLine(string.Format("{0} plays:\t{1} plays:", players[0].PlayerName, players[1].PlayerName));
-                    //Offset the cards print position by the length of the player name - and tack on 7 to account for " plays:"
-                    MultiCardPrint(playerOneDraw, playerTwoDraw);
-
+                    PrintTurnInfo(players[0].PlayerName, playerOneDraw, players[1].PlayerName, playerTwoDraw);
                 }
 
                 //Shuffle the winnings each time - this helps prevent the game from going into stalemates
@@ -199,16 +195,23 @@ namespace WarCardGame
             Console.WriteLine(string.Format("{0} wins with {1} cards!!", winningPlayer.PlayerName, winningPlayer.PlayerCardCount));
         }
 
-        public void MultiCardPrint(Card cardA, Card cardB)
+        void PrintTurnInfo(string playerAName, Card playerADraw, string playerBName, Card playerBDraw)
         {
-            string[] a = cardA.GetAsciiCard();
-            string[] b = cardB.GetAsciiCard();
-            //For helping center the cards a bit more
-            string offset = new string(' ', a[0].Length / 2);
+            playerAName += " Plays:";
+
+            int offset = playerAName.Length > 10 ? playerAName.Length : 10;
+
+            playerBName += " Plays:";
+            Console.WriteLine("{0,-25}{1,25}", playerAName, playerBName);
+
+            string[] a = playerADraw.GetAsciiCard();
+            string[] b = playerBDraw.GetAsciiCard();
+            offset -= a.Length;
+
             //Cards print value always share the same length, so we can just grab it from one of them
             for (int i = 0; i < a.Length; i++)
             {
-                Console.Write(offset + a[i] + "\t" + offset + b[i] + "\n");
+                Console.WriteLine("{0,-25}{1,25}", a[i], b[i]);
             }
         }
 
@@ -253,14 +256,15 @@ namespace WarCardGame
 
         public bool ResetGame()
         {
-            Console.WriteLine("Press Any Key To Exit.\nPress Enter To Play Again");
-            
-            players[0] = new Player();
-            players[1] = new Player();
+            Console.WriteLine("Press Any Key To Exit.\nPress Enter To Play Again");         
 
             var pressed = Console.ReadKey();
             if (pressed.Key == ConsoleKey.Enter)
             {
+                players[0] = new Player();
+                players[1] = new Player();
+                Console.Clear();
+
                 return true;
             }
 
